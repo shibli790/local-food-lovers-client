@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import AuthContext from './AuthContext'; // ✅ Default import
+import AuthContext from './AuthContext'; 
 import { auth, googleProvider } from '../firebase/firebase.config';
 import {
   onAuthStateChanged,
@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Listen for auth state changes
+ 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
 
   const resetPassword = email => sendPasswordResetEmail(auth, email);
 
-  // useMemo to optimize context value
+
   const value = useMemo(
     () => ({
       user,

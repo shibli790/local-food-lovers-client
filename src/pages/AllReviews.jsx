@@ -45,12 +45,13 @@ export default function AllReviews() {
           Search
         </button>
       </div>
-      <h1 className="text-3xl mb-3 font-bold  ">All Reviws : {items.length} </h1>
+      <h1 className="text-3xl mb-3 font-bold  ">
+        All Reviws : {items.length}{' '}
+      </h1>
       {loading ? (
-        <div>
-          {' '}
-          <span className="loading loading-spinner text-secondary"></span>
-          Loading...
+        <div className="flex justify-center flex-col items-center text-3xl text-[#f43098]  gap-6">
+          <span className="loading loading-spinner text-8xl text-secondary"></span>
+          <div>Loading...</div>
         </div>
       ) : (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">

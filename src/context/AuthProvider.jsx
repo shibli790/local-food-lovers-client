@@ -8,7 +8,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from 'firebase/auth';
-// import { useAuth } from '../context/AuthContext';
+
 
 const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
@@ -45,8 +45,8 @@ export function AuthProvider({ children }) {
   );
 }
 
-// ✅ এটা যোগ করলেই default import কাজ করবে
+
 export default AuthProvider;
 
-// (ঐচ্ছিক) চাইলে কনটেক্সটটাও named export করে দিতে পারো
+
 export { AuthContext };

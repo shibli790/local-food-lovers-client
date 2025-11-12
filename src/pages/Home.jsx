@@ -81,9 +81,9 @@ export default function Home() {
             </Link>
           </div>
           {loading ? (
-            <div>
-              <span className="loading loading-spinner text-secondary"></span>
-              Loading...
+            <div className="flex justify-center flex-col items-center text-3xl text-[#f43098]  gap-6">
+              <span className="loading loading-spinner text-8xl text-secondary"></span>
+              <div>Loading...</div>
             </div>
           ) : featured.length > 0 ? (
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
