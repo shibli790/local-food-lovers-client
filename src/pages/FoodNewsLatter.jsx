@@ -5,11 +5,11 @@ const FoodNewsLatter = () => {
     <>
       <h2 className="text-3xl text-[#f43098] font-bold ">Food NewsLatter</h2>
       <div className="rounded-2xl mt-6 p-8 md:p-10 bg-gradient-to-br from-[#f43098] to-[#a52dbd] border border-primary/20 ">
-        <p className="opacity-80 mb-5 text-center">
+        <div className="opacity-80 mb-5 text-center">
           <div className="rounded-2xl p-8 md:p-10  ">
-            <h3 className="text-2xl  md:text-white text-3xl text-center font-bold mb-3">
+            <h1 className="text-2xl  md:text-white text-3xl text-center font-bold mb-3">
               Subscribe Newsletters
-            </h3>
+            </h1>
             <p className="opacity-80 text-white mb-5 text-center">
               Stay updated with the latest food reviews, special promotions, new
               restaurant openings, and exciting food trends! Sign up for our
@@ -33,7 +33,7 @@ const FoodNewsLatter = () => {
               </button>
             </form>
           </div>
-        </p>
+        </div>
       </div>
     </>
   );

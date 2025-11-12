@@ -121,13 +121,13 @@ export default function MyReviews() {
                   <td className="p-2 flex mt-3 items-center gap-5">
                     <Link
                       to={`/edit/${r._id}`}
-                      className="flex-col md:underline flex items-center gap-1 text-red-500"
+                      className="underline md:flex items-center gap-1 text-red-500"
                     >
                       Edit <BiEdit />
                     </Link>
                     <button
                       onClick={() => del(r._id)}
-                      className="flex-col md:underline flex items-center gap-1 text-red-500"
+                      className=" underline md:flex items-center gap-1 text-red-500"
                     >
                       Delete <RiDeleteBin6Line />
                     </button>
