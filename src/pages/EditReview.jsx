@@ -11,9 +11,12 @@ export default function EditReview() {
   const [form, setForm] = useState(null);
 
   useEffect(() => {
-    apiFetch(`/reviews/${id}`).then(d => setForm(d));
+    apiFetch(`/reviews/${id}`).then(d =>
+      
+      setForm(d.r));
+    
   }, [id]);
-  // console.log(form.r.foodName);
+  // console.log(form);
   
 
   if (!form) return (
@@ -58,7 +61,7 @@ export default function EditReview() {
             required
             placeholder="Food Name"
             className="border px-4 py-2 w-full rounded-md focus:ring-2"
-            value={form.r.foodName}
+            value={form.foodName}
             onChange={e => setForm({ ...form, foodName: e.target.value })}
           />
         </div>
@@ -75,7 +78,7 @@ export default function EditReview() {
             required
             placeholder="Food Image URL"
             className="border px-4 py-2 w-full rounded-md focus:ring-2"
-            value={form.r.photoUrl}
+            value={form.photoUrl}
             onChange={e => setForm({ ...form, photoUrl: e.target.value })}
           />
         </div>
@@ -92,7 +95,7 @@ export default function EditReview() {
             required
             placeholder="Restaurant Name"
             className="border px-4 py-2 w-full rounded-md focus:ring-2"
-            value={form.r.restaurantName}
+            value={form.restaurantName}
             onChange={e => setForm({ ...form, restaurantName: e.target.value })}
           />
         </div>
@@ -109,7 +112,7 @@ export default function EditReview() {
             required
             placeholder="Location"
             className="border px-4 py-2 w-full rounded-md focus:ring-2"
-            value={form.r.location}
+            value={form.location}
             onChange={e => setForm({ ...form, location: e.target.value })}
           />
         </div>
@@ -126,7 +129,7 @@ export default function EditReview() {
             max="5"
             placeholder="Star Rating (1-5)"
             className="border px-4 py-2 w-full rounded-md focus:ring-2 "
-            value={form.r.rating}
+            value={form.rating}
             onChange={e => setForm({ ...form, rating: e.target.value })}
           />
         </div>
@@ -143,7 +146,7 @@ export default function EditReview() {
             required
             placeholder="Review Text"
             className="border px-4 py-2 w-full rounded-md focus:ring-2 "
-            value={form.r.reviewText}
+            value={form.reviewText}
             onChange={e => setForm({ ...form, reviewText: e.target.value })}
           />
         </div>
