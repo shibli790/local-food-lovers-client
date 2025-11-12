@@ -1,13 +1,13 @@
-# FoodReviews — A Dynamic Food Review Platform
+# ✅ FoodReviews — A Dynamic Food Review Platform
 
 **FoodReviews** is an interactive platform where users can explore, review, and rate their favorite foods from various restaurants. Users can share their experiences, read others' reviews, and manage their own review profiles.
 
 The platform includes dynamic reviews, a favorite system, authentication with Firebase, and a smooth user interface designed for responsiveness across all devices.
 
 ---
-## 🔗 **Live **
-
-* live:[https://local-food-lovers-networks.netlify.app/](#)
+## 🔗 Live Demo
+**Netlify:** https://local-food-lovers-networks.netlify.app/  
+**client Repo:** https://github.com/shibli790/local-food-lovers-client
 
 
 ---
