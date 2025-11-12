@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthProvider';
 
 export default function AddReview() {
   const { user } = useAuth();
-  const [loading, setLoading] = useState(false); // Set loading state to false initially
+  const [loading, setLoading] = useState(false); 
   const nav = useNavigate();
   const [form, setForm] = useState({
     foodName: '',
@@ -21,7 +21,7 @@ export default function AddReview() {
     e.preventDefault();
     if (!user) return toast.error('Login required');
 
-    setLoading(true); // Set loading to true when starting submission
+    setLoading(true); 
 
     const token = await user.getIdToken();
     try {
@@ -35,12 +35,15 @@ export default function AddReview() {
     } catch (e) {
       toast.error(e.message);
     } finally {
-      setLoading(false); // Set loading to false after submission
+      setLoading(false); 
     }
   };
 
   return (
     <div className="max-w-md mx-auto mt-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
+      <h2 className="text-2xl text-center m-4 md:text-5xl  text-[#f43098] font-extrabold">
+        ADD REVIEWS
+      </h2>
       <form onSubmit={submit} className="grid gap-3 max-w-xl">
         <input
           required
@@ -93,7 +96,7 @@ export default function AddReview() {
           className={`btn bg-[#f43098] rounded-2xl text-white ${
             loading ? 'cursor-not-allowed opacity-50' : ''
           }`}
-          disabled={loading} // Disable button when loading
+          disabled={loading}
         >
           {loading ? (
             <span className="loading loading-spinner"></span>

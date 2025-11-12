@@ -29,14 +29,17 @@ export default function Navbar() {
   return (
     <header className="sticky shadow-xl  top-0 z-50 backdrop-blur bg-base-100/80 border-b border-base-content/10">
       <div className=" mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
-        <Link to="/" className=" font-bold text-2xl  inline text-[#f43098]">
+        <Link
+          to="/"
+          className=" text-lg font-bold md:font-bold text-2xl  inline text-[#f43098]"
+        >
           FoodReviews
         </Link>
 
         <nav className={`md:grid-cols-3 lg:grid-cols-3 items-center   `}>
           {user ? (
             <div className="flex justify-between items-center gap-6 ">
-              <div className="flex  md:flex gap-8 text-lg font-medium">
+              <div className="flex text-sm  md:flex gap-8 text-lg font-medium">
                 <Active to="/">Home</Active>
                 <Active to="/reviews">All Reviews</Active>
               </div>
@@ -86,12 +89,12 @@ export default function Navbar() {
             //   </div>
 
             <div className="flex justify-between items-center gap-6 ">
-              <div className="flex  md:flex gap-8 text-lg font-medium">
+              <div className="flex text-sm  md:flex gap-8 text-lg font-medium">
                 <Active to="/">Home</Active>
                 <Active to="/reviews">All Reviews</Active>
               </div>
               <section className=" flex items-center gap-4">
-                <div className="dropdown  dropdown-bottom dropdown-end">
+                <div className="dropdown dropdown-bottom dropdown-end">
                   <div
                     tabIndex={0}
                     role="button"
@@ -103,22 +106,23 @@ export default function Navbar() {
                   </div>
                   <ul
                     tabIndex="-1"
-                    className="menu menu-sm  dropdown-content bg-amber-50 p-2 rounded-box z-1   "
+                    className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm "
                   >
-                    <li className="mb-2 w-full text-wrap">
+                    <li className=" w-full text-wrap">
                       <Active to="/add-review" className=" inline w-full">
                         Add Review
                       </Active>
                     </li>
+                   
                     <li className="mb-2 ">
                       <Active to="/login" className=" w-full">
                         Login
                       </Active>
                     </li>
                     <li>
-                      <Link to="/register" className=" w-fit ">
+                      <Active to="/register" className=" w-fit ">
                         Register
-                      </Link>
+                      </Active>
                     </li>
                   </ul>
                 </div>
