@@ -40,7 +40,7 @@ export default function AddReview() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
+    <div className="max-w-md mx-auto my-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
       <h2 className="text-2xl text-center my-5 md:text-5xl  text-[#f43098] font-extrabold">
         ADD REVIEWS
       </h2>

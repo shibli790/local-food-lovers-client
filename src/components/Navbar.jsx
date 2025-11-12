@@ -21,11 +21,6 @@ const Active = ({ to, children }) => (
 export default function Navbar() {
   const { user, logout } = useAuth();
   const nav = useNavigate();
-
-
-
-
-
   return (
     <header className="sticky shadow-xl  top-0 z-50 backdrop-blur bg-base-100/80 border-b border-base-content/10">
       <div className=" mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
@@ -83,7 +78,6 @@ export default function Navbar() {
               </div>
             </div>
           ) : (
-
             <div className="flex justify-between items-center gap-6 ">
               <div className="flex text-sm  md:flex gap-8 text-lg font-medium">
                 <Active to="/">Home</Active>
@@ -109,7 +103,17 @@ export default function Navbar() {
                         Add Review
                       </Active>
                     </li>
-                   
+                    <li>
+                      <Active to="/my-reviews" className="block px-3 py-1">
+                        My Reviews
+                      </Active>
+                    </li>
+                    <li>
+                      <Active to="/favorites" className="block px-3 py-1">
+                        My Favorites
+                      </Active>
+                    </li>
+
                     <li className="mb-2 ">
                       <Active to="/login" className=" w-full">
                         Login

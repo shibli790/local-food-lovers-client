@@ -85,7 +85,7 @@ export default function MyReviews() {
       <h1 className="text-3xl mb-5 mt-5 font-bold container mx-auto">
         My Reviews : {rows.length}
       </h1>
-      <div className="container  m-auto overflow-x-auto">
+      <div className="container mb-32  m-auto overflow-x-auto">
         <table className="w-full text-sm rounded-t-2xl overflow-hidden">
           <thead className="bg-[#f43098] text-white">
             <tr className="text-left border-b">

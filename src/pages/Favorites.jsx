@@ -56,7 +56,7 @@ export default function Favorites() {
       {loading ? (
         <div className=""></div>
       ) : (
-        <div className="grid container mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid container mb-32 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
           {rows.map((f, i) => (
             <div key={i} className="border rounded-2xl overflow-hidden">
               <img
