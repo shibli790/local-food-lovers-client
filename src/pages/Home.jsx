@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import FoodNewsLatter from './FoodNewsLatter';
+import FoodBlog from './FoodBlog';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -68,9 +69,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="space-y-10 container mx-auto px-4 py-6">
+      <div className="space-y-10 mt-5 container mx-auto px-4 py-6">
         <section>
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-6">
             <h2 className="text-3xl text-[#f43098] font-bold ">
               Featured Reviews
             </h2>
@@ -99,9 +100,9 @@ export default function Home() {
                     className="h-70 w-full p-2 rounded-2xl object-cover"
                   />
                   <div className="p-3 space-y-1">
-                    <div className="font-bold text-2xl">
+                    <div className="font-bold text-2xl text-[#f43098]">
                       {' '}
-                      Food Name :{r.foodName}
+                      Food Name : {r.foodName}
                     </div>
                     <div className="text-sm opacity-80">
                       RestaurantName : {r.restaurantName}
@@ -130,23 +131,9 @@ export default function Home() {
           )}
         </section>
 
-        <FoodNewsLatter/>
-
         {/* Extra sections */}
-        {/* <section className="grid md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-2xl border">
-            <h3 className="text-xl font-semibold">Street Food Spotlight</h3>
-            <p className="mt-2">
-              Find the best carts and stalls your city hides.
-            </p>
-          </div>
-          <div className="p-6 rounded-2xl border">
-            <h3 className="text-xl font-semibold">Home-Cook Heroes</h3>
-            <p className="mt-2">
-              Celebrate home kitchens serving love on a plate.
-            </p>
-          </div>
-        </section> */}
+        <FoodBlog />
+        <FoodNewsLatter />
       </div>
     </section>
   );

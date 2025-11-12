@@ -2,7 +2,7 @@ import React from 'react';
 
 const FoodNewsLatter = () => {
   return (
-    <div className="rounded-2xl p-8 md:p-10 bg-gradient-to-br from-[#f43098] to-[#a52dbd] border border-primary/20 ">
+    <div className="rounded-2xl mt-16 p-8 md:p-10 bg-gradient-to-br from-[#f43098] to-[#a52dbd] border border-primary/20 ">
       <p className="opacity-80 mb-5 text-center">
         <div className="rounded-2xl p-8 md:p-10  ">
           <h3 className="text-2xl  md:text-3xl text-center font-bold mb-3">
@@ -31,8 +31,6 @@ const FoodNewsLatter = () => {
           </form>
         </div>
       </p>
-
-      
     </div>
   );
 };
