@@ -5,7 +5,7 @@ const FoodBlog = () => {
   return (
     <div className="mt-12">
       <div className="">
-        <h2 className="text-3xl text-[#f43098] font-bold mb-6">Foodie Blog</h2>
+        <h2 className="text-3xl text-[#f43098] font-bold mb-6">Foodie Blogs</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Blog Card 1 */}
           <div className=" shadow-xl border border-gray-200  p-4 rounded-lg">

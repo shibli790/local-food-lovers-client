@@ -83,10 +83,6 @@ export default function Navbar() {
               </div>
             </div>
           ) : (
-            // <div className="flex items-center gap-4">
-            //   <NavLink to="/login">Login</NavLink>
-            //   <NavLink to="/register">Register</NavLink>
-            //   </div>
 
             <div className="flex justify-between items-center gap-6 ">
               <div className="flex text-sm  md:flex gap-8 text-lg font-medium">

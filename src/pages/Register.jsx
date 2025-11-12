@@ -28,9 +28,11 @@ export default function Register() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-32 card bg-gradient-to-r from-[#fab4d9] to-purple-300 w-full p-5 shrink-0 shadow-2xl">
-      <h2 className="text-2xl text-center font-bold mb-4">Register</h2>
-      <h2 className="text-2xl text-center font-bold mb-4">Register</h2>
+    <div className="max-w-md mx-auto mt-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
+      <h2 className="text-2xl text-[#f43098] text-center font-bold mb-4">
+        Create New Account <br />
+        Register Now{' '}
+      </h2>
       <form onSubmit={submit} className="grid gap-3">
         <input
           required
@@ -74,9 +76,9 @@ export default function Register() {
         </button>
       </form>
       <h1 className="mt-3 text-sm">
-        Already Account ?
+      Have Already an Account ?
         <Link className="underline text-[#f43098]" to="/login">
-          login Naw
+          login Now
         </Link>
       </h1>
     </div>
