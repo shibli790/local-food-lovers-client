@@ -1,15 +1,16 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { apiFetch } from '../lib/api';
 import { Link } from 'react-router';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { SlLocationPin } from 'react-icons/sl';
 import { FaCircleArrowRight } from 'react-icons/fa6';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { motion } from 'framer-motion'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import FoodNewsLatter from './FoodNewsLatter';
 import FoodBlog from './FoodBlog';
+import FoodNewsLatter from './FoodNewsLatter';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,6 @@ export default function Home() {
     setLoading(true);
     apiFetch('/featured-reviews')
       .then(data => {
-        // console.log(data); 
         setFeatured(data);
       })
       .catch(error => {
@@ -41,8 +41,11 @@ export default function Home() {
           >
             {featured.length > 0 ? (
               featured.map(i => (
-                <SwiperSlide className="inset-0" key={i.id}>
-                  <div
+                <SwiperSlide key={i.id}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9 }}
                     className="h-[360px] md:h-[420px] bg-no-repeat w-full bg-cover bg-center"
                     style={{
                       backgroundImage: `url(${i.photoUrl})`,
@@ -59,7 +62,7 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               ))
             ) : (
@@ -90,9 +93,12 @@ export default function Home() {
           ) : featured.length > 0 ? (
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.map(r => (
-                <div
+                <motion.div
                   key={r._id}
                   className="card bg-base-100 shadow-xl border border-gray-200 overflow-hidden"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9 }}
                 >
                   <img
                     src={r.photoUrl}
@@ -101,18 +107,16 @@ export default function Home() {
                   />
                   <div className="p-3 space-y-1">
                     <div className="font-bold text-2xl text-[#f43098]">
-                      {' '}
                       Food Name : {r.foodName}
                     </div>
                     <div className="text-sm opacity-80">
-                      RestaurantName : {r.restaurantName}
+                      Restaurant Name : {r.restaurantName}
                       <div className="flex items-center gap-2">
-                        {' '}
-                        <SlLocationPin className="inline  text-sm " />{' '}
-                        RestaurantLocation : {r.location}
+                        <SlLocationPin className="inline text-sm " />
+                        Restaurant Location : {r.location}
                       </div>
                     </div>
-                    <div className="text-sm  flex items-center justify-between gap-2">
+                    <div className="text-sm flex items-center justify-between gap-2">
                       Review By Name : {r.reviewerName}{' '}
                       <div>Rating : ⭐ {r.rating}</div>
                     </div>
@@ -123,7 +127,7 @@ export default function Home() {
                       <span>View Details</span> <FaCircleArrowRight />
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           ) : (
