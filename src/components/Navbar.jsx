@@ -27,7 +27,7 @@ export default function Navbar() {
 
 
   return (
-    <header className="sticky shadow-xl  top-0 z-50 backdrop-blur bg-[#f7f2f6] border-b border-base-content/10">
+    <header className="sticky shadow-xl  top-0 z-50 backdrop-blur bg-base-100/80 border-b border-base-content/10">
       <div className=" mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
         <Link to="/" className=" font-bold text-2xl  inline text-[#f43098]">
           FoodReviews

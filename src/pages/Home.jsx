@@ -8,6 +8,7 @@ import { FaCircleArrowRight } from 'react-icons/fa6';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import FoodNewsLatter from './FoodNewsLatter';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -128,6 +129,8 @@ export default function Home() {
             <div>No featured reviews available</div>
           )}
         </section>
+
+        <FoodNewsLatter/>
 
         {/* Extra sections */}
         {/* <section className="grid md:grid-cols-2 gap-6">

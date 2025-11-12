@@ -1,13 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <div className="font-semibold">Local Food Lovers</div>
-        <div className="text-sm opacity-70">© .</div>
-        <div className="flex gap-3">
-          <h1>icon </h1>
-        </div>
-      </div>
+    <footer className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center  bottom-0 w-full">
+      {/* <div className="text-xl font-bold text-[#f43098]">LocalFoodNet</div>
+      <div className="space-x-8">
+        <a href="#" className="hover:text-pink-500">
+          Quick Links
+        </a>
+        <a href="#" className="hover:text-pink-500">
+          Robust News
+        </a>
+      </div> */}
+      
     </footer>
   );
 }
