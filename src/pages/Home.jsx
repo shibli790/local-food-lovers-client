@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="bg-[#ffffff]">
+    <section className="">
       <section className="relative z-1 overflow-hidden neon-edge">
         <div className="">
           <Swiper
@@ -48,7 +48,7 @@ export default function Home() {
                   >
                     <div className="h-full w-full container mx-auto from-base-100/90 to-transparent p-8 flex items-end">
                       <div>
-                        <h2 className="text-3xl md:text-7xl text-[#f43098] font-extrabold">
+                        <h2 className="text-3xl md:text-5xl text-[#f43098] font-bold">
                           {i.foodName}
                         </h2>
                         <p className="text-xl flex items-center font-bold m-2 text-[#ffffffc7] ">
@@ -70,7 +70,9 @@ export default function Home() {
       <div className="space-y-10 container mx-auto px-4 py-6">
         <section>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-3xl text-[#f43098] font-bold ">Featured Reviews</h2>
+            <h2 className="text-3xl text-[#f43098] font-bold ">
+              Featured Reviews
+            </h2>
             <Link
               to="/reviews"
               className="btn btn-outline border-1 border-[#f43098] text-[#f43098] rounded-2xl p-2.5"
