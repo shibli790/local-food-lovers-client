@@ -3,60 +3,52 @@ import { Link } from 'react-router';
 export default function Footer() {
   return (
     <>
-      <section className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center  bottom-0 w-full">
-        {/* <div className="text-xl font-bold text-[#f43098]">LocalFoodNet</div>
-      <div className="space-x-8">
-        <a href="#" className="hover:text-pink-500">
-          Quick Links
-        </a>
-        <a href="#" className="hover:text-pink-500">
-          Robust News
-        </a>
-      </div> */}
-
-        <footer className="footer sm:footer-horizontal container mx-auto text-[#f43098] p-10 border-b-2 border-slate-400">
+      <section className="bg-[#f43098] text-white py-4 px-6 flex justify-between items-center  bottom-0 w-full">
+        <footer className="footer sm:footer-horizontal container mx-auto text-white p-10 border-b-2 border-slate-400">
           <aside className="grid-flow-col r flex flex-col items-start ml-5">
-            {/* <TfiGame className="text-6xl text-[#f43098]" /> */}
-            <p className="text-lg font-semibold">
-              Game_Hub
+            <p className="text-3xl font-semibold">
+              Local Food Lovers Network
               <br />
-              Providing reliable tech since 2025
             </p>
+            <span className='text-lg'>Providing Food Review since 2025</span>
           </aside>
           <nav>
-            <h6 className="footer-title">GameHub</h6>
+            <h6 className=" px-3 font-bold py-1">FoodReviews</h6>
 
-            <Link to="/add-review" className="block px-3 py-1">
+            <Link to="/" className="px-3 footer-title py-1">
+              Home
+            </Link>
+
+            <Link to="/add-review" className="block footer-title px-3 py-1">
               Add Review
             </Link>
 
-            <Link to="/my-reviews" className="block px-3 py-1">
+            <Link to="/my-reviews" className="block footer-title px-3 py-1">
               My Reviews
             </Link>
           </nav>
           <nav>
-            <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Game</a>
-            <a className="link link-hover">Apps</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <h6 className="font-bold">Services</h6>
+            <a className="link footer-title link-hover">Foods</a>
+            <a className="link footer-title link-hover">Foods Reviews</a>
+            <a className="link footer-title link-hover">Marketing</a>
+            <a className="link footer-title link-hover">Advertisement</a>
           </nav>
           <nav>
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Press kit</a>
+            <h6 className="font-bold">Company</h6>
+            <a className="link footer-title link-hover">About us</a>
+            <a className="link footer-title link-hover">Contact</a>
+            <a className="link footer-title link-hover">Press kit</a>
           </nav>
           <nav>
-            <h6 className="footer-title">Legal</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+            <h6 className="font-bold">Legal</h6>
+            <a className="link footer-title link-hover">Terms of use</a>
+            <a className="link footer-title link-hover">Privacy policy</a>
+            <a className="link footer-title link-hover">Cookie policy</a>
           </nav>
         </footer>
         {/* ///////////////////////////////2nd footer */}
       </section>
-
     </>
   );
 }
