@@ -6,28 +6,51 @@ import { SlLocationPin } from 'react-icons/sl';
 export default function Favorites() {
   const { user } = useAuth();
   const [rows, setRows] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     if (!user) return;
-    setLoading(true); // Set loading to true when starting to fetch data
+    setLoading(true); 
     user.getIdToken().then(token =>
       apiFetch('/my-favorites', { token }).then(data => {
         setRows(data);
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       })
     );
   }, [user]);
 
   return (
     <>
+      <section>
+        <div
+          className="relative bg-cover bg-center h-72"
+          style={{
+            backgroundImage:
+              'url("https://i.ibb.co.com/3mB5nW0B/Black-and-Orange-Restaurant-Fast-Food-Facebook-Cover.png")',
+          }}
+        >
+          <div className="absolute inset-0 "></div>
+          <div className="relative z-10 flex justify-around    text-white space-y-4 py-16">
+            <div></div>
+            <div className="flex flex-col gap-6">
+              <h1 className="text-4xl font-bold">Local Food Lovers Network</h1>
+              <p className="text-lg opacity-80">
+                Explore the best food all reviews from our community!
+              </p>
+              <button className="bg-pink-600 text-white px-6 py-3 rounded-full text-lg hover:bg-pink-700 transition">
+                My Favorite Bites
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <h1 className="text-3xl mb-3 font-bold container mx-auto mt-4">
         My Favorite Bites : {rows.length}
       </h1>
 
       {loading ? (
-        <div className="">
-        </div>
+        <div className=""></div>
       ) : (
         <div className="grid container mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
           {rows.map((f, i) => (

@@ -53,56 +53,86 @@ export default function MyReviews() {
   };
 
   return (
-    <div className="container p-4 m-auto overflow-x-auto">
-      <h1 className="text-3xl mb-3 font-bold">My Reviews : {rows.length}</h1>
-      <table className="w-full text-sm rounded-t-2xl overflow-hidden">
-        <thead className="bg-[#f43098] text-white">
-          <tr className="text-left border-b">
-            <th className="p-2">Image</th>
-            <th className="p-2">Food</th>
-            <th className="p-2">Restaurant</th>
-            <th className="p-2">Posted</th>
-            <th className="p-2">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="bg-[#ffffff] shadow-xl">
-          {rows.length === 0 ? (
-            <tr>
-              <td colSpan="5" className="text-center py-4">
-                No reviews available
-              </td>
+    <>
+      <section>
+        <div
+          className="relative bg-cover bg-center h-72"
+          style={{
+            backgroundImage:
+              'url("https://i.ibb.co.com/3mB5nW0B/Black-and-Orange-Restaurant-Fast-Food-Facebook-Cover.png")',
+          }}
+        >
+          <div className="absolute inset-0 "></div>
+          <div className="relative z-10 flex justify-around    text-white space-y-4 py-16">
+            <div></div>
+            <div className="flex flex-col gap-6">
+              <h1 className="text-4xl font-bold">Local Food Lovers Network</h1>
+              <p className="text-lg opacity-80">
+                Explore the best food reviews from our community!
+              </p>
+              <button
+                to="/my-reviews"
+                className="bg-pink-600 text-white px-6 py-3 rounded-full text-lg hover:bg-pink-700 transition"
+              >
+                My Reviews
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h1 className="text-3xl mb-5 mt-5 font-bold container mx-auto">
+        My Reviews : {rows.length}
+      </h1>
+      <div className="container  m-auto overflow-x-auto">
+        <table className="w-full text-sm rounded-t-2xl overflow-hidden">
+          <thead className="bg-[#f43098] text-white">
+            <tr className="text-left border-b">
+              <th className="p-2">Image</th>
+              <th className="p-2">Food</th>
+              <th className="p-2">Restaurant</th>
+              <th className="p-2">Posted</th>
+              <th className="p-2">Actions</th>
             </tr>
-          ) : (
-            rows.map(r => (
-              <tr key={r._id} className="border-b">
-                <td className="p-2">
-                  <img
-                    src={r.photoUrl}
-                    className="w-16 h-12 object-cover rounded"
-                    alt={r.foodName}
-                  />
-                </td>
-                <td className="p-2">{r.foodName}</td>
-                <td className="p-2">{r.restaurantName}</td>
-                <td className="p-2">
-                  {new Date(r.createdAt).toLocaleDateString()}
-                </td>
-                <td className="p-2 flex mt-3 items-center gap-5">
-                  <Link to={`/edit/${r._id}`} className="underline">
-                    Edit
-                  </Link>
-                  <button
-                    onClick={() => del(r._id)}
-                    className="underline text-red-500"
-                  >
-                    Delete
-                  </button>
+          </thead>
+          <tbody className="bg-[#ffffff] shadow-xl">
+            {rows.length === 0 ? (
+              <tr>
+                <td colSpan="5" className="text-center py-4">
+                  No reviews available
                 </td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
-    </div>
+            ) : (
+              rows.map(r => (
+                <tr key={r._id} className="border-b">
+                  <td className="p-2">
+                    <img
+                      src={r.photoUrl}
+                      className="w-16 h-12 object-cover rounded"
+                      alt={r.foodName}
+                    />
+                  </td>
+                  <td className="p-2">{r.foodName}</td>
+                  <td className="p-2">{r.restaurantName}</td>
+                  <td className="p-2">
+                    {new Date(r.createdAt).toLocaleDateString()}
+                  </td>
+                  <td className="p-2 flex mt-3 items-center gap-5">
+                    <Link to={`/edit/${r._id}`} className="underline">
+                      Edit
+                    </Link>
+                    <button
+                      onClick={() => del(r._id)}
+                      className="underline text-red-500"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }

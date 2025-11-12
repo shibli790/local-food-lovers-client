@@ -1,4 +1,3 @@
-
 import { apiFetch } from '../lib/api';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
@@ -7,6 +6,7 @@ import { useAuth } from '../context/AuthProvider';
 
 export default function AddReview() {
   const { user } = useAuth();
+  const [loading, setLoading] = useState(false); // Set loading state to false initially
   const nav = useNavigate();
   const [form, setForm] = useState({
     foodName: '',
@@ -20,12 +20,9 @@ export default function AddReview() {
   const submit = async e => {
     e.preventDefault();
     if (!user) return toast.error('Login required');
-    if (
-      !/[A-Z]/.test(form.password || '') ||
-      !/[a-z]/.test(form.password || '')
-    ) {
-      ('');
-    }
+
+    setLoading(true); // Set loading to true when starting submission
+
     const token = await user.getIdToken();
     try {
       await apiFetch('/reviews', {
@@ -37,6 +34,8 @@ export default function AddReview() {
       nav('/my-reviews');
     } catch (e) {
       toast.error(e.message);
+    } finally {
+      setLoading(false); // Set loading to false after submission
     }
   };
 
@@ -88,8 +87,19 @@ export default function AddReview() {
           value={form.reviewText}
           onChange={e => setForm({ ...form, reviewText: e.target.value })}
         />
-        <button className="btn bg-[#f43098] rounded-2xl text-white">
-          Add Review
+
+        <button
+          type="submit"
+          className={`btn bg-[#f43098] rounded-2xl text-white ${
+            loading ? 'cursor-not-allowed opacity-50' : ''
+          }`}
+          disabled={loading} // Disable button when loading
+        >
+          {loading ? (
+            <span className="loading loading-spinner"></span>
+          ) : (
+            'Add Review'
+          )}
         </button>
       </form>
     </div>
