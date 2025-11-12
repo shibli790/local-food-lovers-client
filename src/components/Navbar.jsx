@@ -22,8 +22,8 @@ export default function Navbar() {
   const { user, logout } = useAuth();
   const nav = useNavigate();
   return (
-    <header className="sticky shadow-xl  top-0 z-50 backdrop-blur bg-base-100/80 border-b border-base-content/10">
-      <div className=" mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
+    <header className="sticky shadow-xl   top-0 z-50 backdrop-blur bg-base-100/80 border-b border-base-content/10">
+      <div className="mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
         <Link
           to="/"
           className=" text-lg font-bold md:text-2xl font-bold lg:text-3xl  inline text-[#f43098]"
