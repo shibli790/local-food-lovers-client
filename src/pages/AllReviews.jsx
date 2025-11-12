@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { apiFetch } from '../lib/api';
+import { apiFetch } from '../hooks/api';
 import { toast } from 'react-toastify';
 import { useAuth } from '../context/AuthProvider';
 import { Link } from 'react-router';
 import { FaCircleArrowRight } from 'react-icons/fa6';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion';
+import { SiHomeassistantcommunitystore } from 'react-icons/si';
+import { SlLocationPin } from 'react-icons/sl';
 
 export default function AllReviews() {
   const [items, setItems] = useState([]);
@@ -59,9 +61,9 @@ export default function AllReviews() {
             <motion.div
               key={r._id}
               className="card bg-base-100 shadow-xl border border-gray-200 flex flex-col"
-              initial={{ opacity: 0, y: 20 }} // Initial state (invisible and below)
-              animate={{ opacity: 1, y: 0 }} // Final state (visible and in place)
-              transition={{ duration: 0.9 }} // Animation duration
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
             >
               <img
                 src={r.photoUrl}
@@ -69,13 +71,18 @@ export default function AllReviews() {
                 className="h-70 w-full p-2 rounded-2xl object-cover"
               />
               <div className="p-3 flex-1">
-                <div className="font-bold text-2xl">
+                <div className="font-bold mb-2 text-[#f43098] text-2xl">
                   {' '}
                   Food Name : {r.foodName}
                 </div>
-                <div className="text-sm opacity-80 ">
-                  Restaurant Name : {r.restaurantName}{' '}
-                  <div> Restaurant Location : {r.location}</div>
+                <div className="flex items-center gap-2">
+                  <SiHomeassistantcommunitystore />
+                  Restaurant Name : {r.restaurantName}
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <SlLocationPin className="inline text-sm " />
+                  Restaurant Location : {r.location}
                 </div>
                 <div className="text-sm mt-1">⭐ {r.rating}</div>
               </div>

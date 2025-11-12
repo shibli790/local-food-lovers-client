@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { apiFetch } from '../lib/api';
+import { apiFetch } from '../hooks/api';
 import { Link } from 'react-router';
-import { SlLocationPin } from 'react-icons/sl';
 import { FaCircleArrowRight } from 'react-icons/fa6';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -11,6 +10,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import FoodBlog from './FoodBlog';
 import FoodNewsLatter from './FoodNewsLatter';
+import { SiHomeassistantcommunitystore } from 'react-icons/si';
+import { SlLocationPin } from 'react-icons/sl';
+import { GrUserManager } from 'react-icons/gr';
+
+
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -105,24 +109,32 @@ export default function Home() {
                     alt={r.foodName}
                     className="h-70 w-full p-2 rounded-2xl object-cover"
                   />
-                  <div className="p-3 space-y-1">
+                  <div className="p-4  space-y-1">
                     <div className="font-bold text-2xl text-[#f43098]">
                       Food Name : {r.foodName}
                     </div>
-                    <div className="text-sm opacity-80">
-                      Restaurant Name : {r.restaurantName}
+                    <div className=" text-sm opacity-80">
+                      <div className="flex items-center gap-2">
+                        <SiHomeassistantcommunitystore />
+                        Restaurant Name : {r.restaurantName}
+                      </div>
+
                       <div className="flex items-center gap-2">
                         <SlLocationPin className="inline text-sm " />
                         Restaurant Location : {r.location}
                       </div>
                     </div>
                     <div className="text-sm flex items-center justify-between gap-2">
-                      Review By Name : {r.reviewerName}{' '}
+                      <div className='flex items-center gap-2'>
+                        <GrUserManager />
+                        Review By Name : {r.reviewerName}{' '}
+                      </div>
+
                       <div>Rating : ⭐ {r.rating}</div>
                     </div>
                     <Link
                       to={`/reviewdetails/${r._id}`}
-                      className="btn btn-outline flex items-center gap-2 w-full border-1 border-[#f43098] text-[#f43098] rounded-2xl p-2.5"
+                      className="btn btn-outline mt-2 flex items-center gap-2 w-full border-1 border-[#f43098] text-[#f43098] rounded-2xl p-2.5"
                     >
                       <span>View Details</span> <FaCircleArrowRight />
                     </Link>

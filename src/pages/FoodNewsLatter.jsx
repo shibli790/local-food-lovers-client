@@ -8,10 +8,11 @@ const FoodNewsLatter = () => {
           <h3 className="text-2xl  md:text-3xl text-center font-bold mb-3">
             Subscribe Newsletters
           </h3>
-          <p className="opacity-80 mb-5 text-center">
-            News Updates And Dev-Spotlights—No Spam You will never miss our
-            Updates, latest news etc. <br /> Our newsletter is once a week,
-            every Thursday .
+          <p className="opacity-80 text-white mb-5 text-center">
+            Stay updated with the latest food reviews, special promotions, new
+            restaurant openings, and exciting food trends! Sign up for our
+            newsletter to receive fresh reviews and delicious updates directly
+            to your inbox every week.
           </p>
 
           <form class="mx-auto flex max-w-xl flex-col gap-3 sm:flex-row">

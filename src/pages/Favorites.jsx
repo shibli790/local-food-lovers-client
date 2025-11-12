@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthProvider';
-import { apiFetch } from '../lib/api';
+import { apiFetch } from '../hooks/api';
 import { SlLocationPin } from 'react-icons/sl';
+import { SiHomeassistantcommunitystore } from 'react-icons/si';
+import { GrUserManager } from 'react-icons/gr';
+
 
 export default function Favorites() {
   const { user } = useAuth();
@@ -61,18 +64,20 @@ export default function Favorites() {
                 className="h-40 w-full object-cover"
               />
               <div className="p-3">
-                <div className="font-bold text-2xl">
-                  Food Name: {f.review.foodName}
+                <div className="flex items-center gap-2">
+                  <SiHomeassistantcommunitystore />
+                  Restaurant Name : {f.review.restaurantName}
                 </div>
-                <div className="text-sm opacity-80">
-                  Restaurant Name: {f.review.restaurantName}
-                  <div className="flex items-center gap-2">
-                    <SlLocationPin className="inline text-sm" />
-                    Restaurant Location: {f.review.location}
-                  </div>
+
+                <div className="flex items-center gap-2">
+                  <SlLocationPin className="inline text-sm " />
+                  Restaurant Location : {f.review.location}
                 </div>
                 <div className="text-sm flex items-center justify-between gap-2">
-                  Review By: {f.review.reviewerName}
+                  <div className="flex items-center gap-2">
+                    <GrUserManager />
+                    Review By Name : {f.review.reviewerName}{' '}
+                  </div>
                   <div>Rating: ⭐ {f.review.rating}</div>
                 </div>
               </div>

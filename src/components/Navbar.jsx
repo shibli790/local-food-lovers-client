@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className=" mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
         <Link
           to="/"
-          className=" text-lg font-bold md:font-bold text-2xl  inline text-[#f43098]"
+          className=" text-lg font-bold md:text-2xl font-bold lg:text-3xl  inline text-[#f43098]"
         >
           FoodReviews
         </Link>

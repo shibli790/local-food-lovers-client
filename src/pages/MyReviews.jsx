@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthProvider';
-import { apiFetch } from '../lib/api';
+import { apiFetch } from '../hooks/api';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import { BiEdit } from 'react-icons/bi';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+
+
 
 export default function MyReviews() {
   const { user } = useAuth();
@@ -72,7 +76,7 @@ export default function MyReviews() {
                 Explore the best food and reviews from our community!
               </p>
               <button className="bg-pink-600 text-white px-6 py-3 rounded-full text-lg hover:bg-pink-700 transition mt-4">
-                My Reviews 
+                My Reviews
               </button>
             </div>
           </div>
@@ -115,14 +119,17 @@ export default function MyReviews() {
                     {new Date(r.createdAt).toLocaleDateString()}
                   </td>
                   <td className="p-2 flex mt-3 items-center gap-5">
-                    <Link to={`/edit/${r._id}`} className="underline">
-                      Edit
+                    <Link
+                      to={`/edit/${r._id}`}
+                      className="flex-col md:underline flex items-center gap-1 text-red-500"
+                    >
+                      Edit <BiEdit />
                     </Link>
                     <button
                       onClick={() => del(r._id)}
-                      className="underline text-red-500"
+                      className="flex-col md:underline flex items-center gap-1 text-red-500"
                     >
-                      Delete
+                      Delete <RiDeleteBin6Line />
                     </button>
                   </td>
                 </tr>

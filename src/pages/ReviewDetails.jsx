@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { apiFetch } from '../lib/api';
+import { apiFetch } from '../hooks/api';
 import { Link, useParams } from 'react-router';
 
 const ReviewDetails = () => {
@@ -20,7 +20,12 @@ const ReviewDetails = () => {
   }, [id]);
 
   if (!form) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center mt-6 flex-col items-center text-3xl text-[#f43098]  gap-4">
+        <span className="loading loading-spinner text-8xl  text-secondary"></span>
+        <div>Loading...</div>
+      </div>
+    );
   }
   
   return (

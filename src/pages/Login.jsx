@@ -31,7 +31,7 @@ export default function Login() {
   return (
     <div className="max-w-md mx-auto mt-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
       <h2 className="text-2xl text-center font-bold mb-4">Login</h2>
-      <h2 className="text-2xl text-center font-bold mb-4">Jo</h2>
+      <h2 className="text-2xl text-center font-bold mb-4"></h2>
       <form onSubmit={onSubmit} className="grid gap-3">
         <input
           required
