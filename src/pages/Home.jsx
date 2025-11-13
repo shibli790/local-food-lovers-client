@@ -13,6 +13,7 @@ import FoodNewsLatter from './FoodNewsLatter';
 import { SiHomeassistantcommunitystore } from 'react-icons/si';
 import { SlLocationPin } from 'react-icons/sl';
 import { GrUserManager } from 'react-icons/gr';
+import { SiIfood } from "react-icons/si";
 
 
 
@@ -55,13 +56,13 @@ export default function Home() {
                       backgroundImage: `url(${i.photoUrl})`,
                     }}
                   >
-                    <div className="h-full w-full container mx-auto from-base-100/90 to-transparent p-8 flex items-end">
+                    <div className="h-full w-full container mx-auto from-base-100/90 to-transparent p-8 flex  items-end  ">
                       <div>
-                        <h2 className="text-3xl md:text-5xl text-[#f43098] font-bold">
-                          {i.foodName}
+                        <h2 className="text-3xl flex gap-3 item-center md:text-5xl mb-3 text-[#f43098] font-bold">
+                          {i.foodName} <SiIfood />
                         </h2>
-                        <p className="text-xl flex items-center font-bold m-2 text-[#ffffffc7] ">
-                          <SlLocationPin className="inline ml-2 text-lg m-2" />
+                        <p className="text-xl flex gap-1 items-center font-bold  text-[#ffffffe7] ">
+                          <SlLocationPin className="inline  text-lg " />
                           {i.location}
                         </p>
                       </div>
@@ -79,7 +80,7 @@ export default function Home() {
       <div className="space-y-10 mt-5 container mx-auto px-4 py-6">
         <section>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl text-[#f43098] font-bold ">
+            <h2 className="text-3xl bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-bold ">
               Featured Reviews
             </h2>
             <Link
@@ -125,7 +126,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="text-sm flex items-center justify-between gap-2">
-                      <div className='flex items-center gap-2'>
+                      <div className="flex items-center gap-2">
                         <GrUserManager />
                         Review By Name : {r.reviewerName}{' '}
                       </div>

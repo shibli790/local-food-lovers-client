@@ -10,7 +10,9 @@ export default function NotFound() {
         className="mx-auto mb-6 w-2xl rounded-2xl"
         src="https://media.giphy.com/media/UoeaPqYrimha6rdTFV/giphy.gif"
       />
-      <h2 className="text-3xl font-semibold mb-2">Oops — page not found</h2>
+      <h2 className="text-3xl bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-semibold mb-2">
+        Oops — page not found
+      </h2>
       <Link
         to="/"
         className="btn btn-outline border-1 mt-3.5 border-[#f43098] text-[#f43098] rounded-2xl p-2.5"

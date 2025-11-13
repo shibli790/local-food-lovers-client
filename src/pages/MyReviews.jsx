@@ -82,7 +82,7 @@ export default function MyReviews() {
           </div>
         </div>
       </section>
-      <h1 className="text-3xl mb-5 mt-5 font-bold container mx-auto">
+      <h1 className="text-3xl mb-5 mt-5 font-bold bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent container mx-auto">
         My Reviews : {rows.length}
       </h1>
       <div className="container mb-32  m-auto overflow-x-auto">

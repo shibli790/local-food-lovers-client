@@ -29,7 +29,7 @@ export default function Register() {
 
   return (
     <div className="max-w-md mx-auto my-32 card bg-base-100 w-full p-5 shrink-0 shadow-2xl">
-      <h2 className="text-2xl text-[#f43098] text-center font-bold mb-4">
+      <h2 className="text-2xl bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent text-center font-bold mb-4">
         Create New Account <br />
         Register Now{' '}
       </h2>

@@ -31,7 +31,7 @@ const ReviewDetails = () => {
   return (
     <div className="max-w-5xl mx-auto p-4 md:p-6 lg:p-8">
       <div className="card bg-base-100 shadow-xl border border-gray-200 rounded-2xl overflow-hidden">
-        <h2 className="text-2xl text-center m-4 md:text-5xl  text-[#f43098] font-extrabold">
+        <h2 className="text-2xl text-center m-4 md:text-5xl  bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-extrabold">
           REVIEW DETAILS
         </h2>
         <div className="flex flex-col md:flex-row gap-8 p-6 md:p-8">
@@ -59,8 +59,7 @@ const ReviewDetails = () => {
               to="/"
               className="btn btn-outline border-1 mt-3.5 border-[#f43098] text-[#f43098] rounded-2xl p-2.5"
             >
-              Back 
-
+              Back
             </Link>
           </div>
         </div>

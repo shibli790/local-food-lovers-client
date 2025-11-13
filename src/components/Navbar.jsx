@@ -2,6 +2,7 @@ import { Link, NavLink, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthProvider";
 import { IoIosLogOut } from 'react-icons/io';
 import { FaAlignRight } from 'react-icons/fa6';
+import { SiIfood } from "react-icons/si";
 
 
 const Active = ({ to, children }) => (
@@ -26,9 +27,9 @@ export default function Navbar() {
       <div className="mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
         <Link
           to="/"
-          className=" text-lg font-bold md:text-2xl font-bold lg:text-3xl  inline text-[#f43098]"
+          className=" text-lg  font-bold md:text-2xl font-bold lg:text-3xl   inline text-[#f43098] "
         >
-          FoodReviews
+          FoodReviews <SiIfood className="inline text-xl md:text-3xl" />
         </Link>
 
         <nav className={`md:grid-cols-3 lg:grid-cols-3 items-center   `}>
@@ -96,31 +97,31 @@ export default function Navbar() {
                   </div>
                   <ul
                     tabIndex="-1"
-                    className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm "
+                    className="dropdown-content menu bg-base-100 rounded-box z-1 w-32 p-2 shadow-sm "
                   >
-                    <li className=" w-full text-wrap">
-                      <Active to="/add-review" className=" inline w-full">
+                    <li className="py-1 hover:text-secondary ">
+                      <Active to="/add-review" className=" ">
                         Add Review
                       </Active>
                     </li>
-                    <li>
-                      <Active to="/my-reviews" className="block px-3 py-1">
+                    <li className="py-1 hover:text-secondary ">
+                      <Active to="/my-reviews" className=" ">
                         My Reviews
                       </Active>
                     </li>
-                    <li>
-                      <Active to="/favorites" className="block px-3 py-1">
+                    <li className="py-1 hover:text-secondary ">
+                      <Active to="/favorites" className=" ">
                         My Favorites
                       </Active>
                     </li>
 
-                    <li className="mb-2 ">
-                      <Active to="/login" className=" w-full">
+                    <li className="py-1 hover:text-secondary">
+                      <Active to="/login" className=" ">
                         Login
                       </Active>
                     </li>
-                    <li>
-                      <Active to="/register" className=" w-fit ">
+                    <li className="py-1 hover:text-secondary ">
+                      <Active to="/register" className="  ">
                         Register
                       </Active>
                     </li>
@@ -129,7 +130,7 @@ export default function Navbar() {
                 <div className=" hidden md:grid grid-cols-2 gap-2">
                   <Link
                     to="/login"
-                    className=" rounded-2xl w-full btn text-white btn-secondary"
+                    className=" rounded-2xl w-full btn text-secondary border border-secondary  "
                   >
                     Login
                   </Link>

@@ -45,7 +45,7 @@ export default function EditReview() {
         onSubmit={submit}
         className="w-full max-w-2xl  p-8   bg-[#fff] rounded-lg shadow-lg space-y-6"
       >
-        <h2 className="text-2xl text-center my-5 md:text-5xl  text-[#f43098] font-extrabold">
+        <h2 className="text-2xl text-center my-5 md:text-5xl  bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-extrabold">
           Edit My Review
         </h2>
 
@@ -154,7 +154,7 @@ export default function EditReview() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="btn bg-[#f43098] rounded-2xl text-white w-full hover:bg-amber-400 focus:outline-none "
+            className="btn bg-[#f43098] rounded-2xl text-white w-full hover:bg-[#ca2c80] focus:outline-none "
           >
             Save Changes
           </button>

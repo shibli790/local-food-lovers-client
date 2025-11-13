@@ -49,14 +49,14 @@ export default function Favorites() {
         </div>
       </section>
 
-      <h1 className="text-3xl mb-3 font-bold container mx-auto mt-4">
+      <h1 className="text-3xl mb-3 font-bold bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent container mx-auto mt-4">
         My Favorite Bites : {rows.length}
       </h1>
 
       {loading ? (
         <div className=""></div>
       ) : (
-        <div className="grid container mb-32 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid container p-1 mb-32 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
           {rows.map((f, i) => (
             <div key={i} className="border rounded-2xl overflow-hidden">
               <img

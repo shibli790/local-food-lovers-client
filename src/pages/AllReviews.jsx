@@ -49,7 +49,9 @@ export default function AllReviews() {
           Search
         </button>
       </div>
-      <h1 className="text-3xl mb-3 font-bold">All Reviews : {items.length} </h1>
+      <h1 className="text-3xl mb-3 bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-bold">
+        All Reviews : {items.length}{' '}
+      </h1>
       {loading ? (
         <div className="flex justify-center flex-col items-center text-3xl text-[#f43098] gap-6">
           <span className="loading loading-spinner text-8xl text-secondary"></span>
