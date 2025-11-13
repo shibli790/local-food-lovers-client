@@ -34,7 +34,7 @@ export default function AllReviews() {
   };
 
   return (
-    <div className="space-y-4 container mx-auto p-4">
+    <div className="space-y-4 min-h-screen container mx-auto p-4">
       <div className="flex gap-2">
         <input
           value={search}

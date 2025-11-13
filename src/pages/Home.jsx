@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="space-y-10 mt-5 container mx-auto px-4 py-6">
+      <div className="space-y-10 mt-5  container mx-auto px-4 py-6">
         <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-3xl bg-gradient-to-r from-[#ef48a1] to-[#d82d88] bg-clip-text text-transparent font-bold ">
@@ -96,7 +96,7 @@ export default function Home() {
               <div>Loading...</div>
             </div>
           ) : featured.length > 0 ? (
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.map(r => (
                 <motion.div
                   key={r._id}
