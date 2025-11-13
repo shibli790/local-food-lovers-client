@@ -58,10 +58,13 @@ export default function Favorites() {
       ) : (
         <div className="grid container p-1 mb-32 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-4">
           {rows.map((f, i) => (
-            <div key={i} className="border rounded-2xl overflow-hidden">
+            <div
+              key={i}
+              className="card bg-[#fff] shadow-xl border border-gray-200 overflow-hidden"
+            >
               <img
                 src={f.review.photoUrl}
-                className="h-40 w-full object-cover"
+                className="h-70 w-full p-2 rounded-2xl object-cover"
               />
               <div className="p-3">
                 <div className="flex items-center gap-2">

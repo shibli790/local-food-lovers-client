@@ -10,8 +10,8 @@ const FoodBlog = () => {
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Blog Card 1 */}
-          <div className=" shadow-xl border border-gray-200  p-4 rounded-lg">
-            <h3 className="font-bold text-lg">10 Tips for the Perfect Pizza</h3>
+          <div className=" shadow-xl bg-[#ffffff] border border-gray-200  p-4 rounded-lg">
+            <h3 className="font-bold text-[#ef48a1] text-lg">10 Tips for the Perfect Pizza</h3>
             <p className="text-sm opacity-80">Published: November 10, 2025</p>
             <p className="text-sm mt-2">
               Discover the secrets to making the perfect pizza at home. From
@@ -25,8 +25,8 @@ const FoodBlog = () => {
           </div>
 
           {/* Blog Card 2 */}
-          <div className="shadow-xl border border-gray-200 p-4 rounded-lg">
-            <h3 className="font-bold text-lg">
+          <div className="shadow-xl bg-[#ffffff] border border-gray-200 p-4 rounded-lg">
+            <h3 className="font-bold text-[#ef48a1] text-lg">
               Exploring the Best Street Foods
             </h3>
             <p className="text-sm opacity-80">Published: November 15, 2025</p>
@@ -42,8 +42,8 @@ const FoodBlog = () => {
           </div>
 
           {/* Blog Card 3 */}
-          <div className="shadow-xl border border-gray-200 p-4 rounded-lg">
-            <h3 className="font-bold text-lg">How to Pair Wine with Food</h3>
+          <div className="shadow-xl bg-[#ffffff] border border-gray-200 p-4 rounded-lg">
+            <h3 className="font-bold text-[#ef48a1] text-lg">How to Pair Wine with Food</h3>
             <p className="text-sm opacity-80">Published: November 20, 2025</p>
             <p className="text-sm mt-2">
               Wine pairing can elevate any meal, but it can be tricky. This

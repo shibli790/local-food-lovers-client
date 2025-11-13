@@ -100,7 +100,7 @@ export default function Home() {
               {featured.map(r => (
                 <motion.div
                   key={r._id}
-                  className="card bg-base-100 shadow-xl border border-gray-200 overflow-hidden"
+                  className="card bg-[#fff] shadow-xl border border-gray-200 overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9 }}
